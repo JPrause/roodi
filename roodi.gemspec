@@ -15,4 +15,8 @@ Gem::Specification.new do |gem|
   gem.add_runtime_dependency("ruby_parser")
   gem.executables = ["roodi", "roodi-describe"]
 
+  gem.files         = `git ls-files`.split("\n")
+  gem.test_files    = `git ls-files -- {spec}/*`.split("\n")
+  gem.require_paths = ["lib"]
+
 end
